@@ -1,0 +1,57 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    gap: 50px;
+}
+.field input{
+    width: 100px;
+    height: 100px;
+}
+
+/* .field input{
+    display: none;
+} */
+
+
+
+.field label{
+    display: block;
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: rgb(86, 232, 163);
+    transition: background 0.5s;
+    position: relative;
+}
+
+.field label::after{
+    content: "OFF";
+    color: white;
+    width: 50%;
+    height: 50px;
+    background-color: brown;
+    position: absolute;
+    transition: left 0.5s;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+.field input:checked+label{
+   
+    background-color:whitesmoke;
+   
+}
+
+.field input:checked+label::after{
+    content: "ON";
+    color: white;  
+    background-color: brown;  
+    position: absolute;  
+    left: 0;  
+    transform: translateX(100%);
+}
